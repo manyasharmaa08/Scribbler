@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ScriBBler - Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/common.css">
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+  <!-- Header (shared across all pages) -->
+  <header class="site-header">
+    <div class="site-branding">
+      <a href="index.html" class="site-logo">ScriBBler</a>
+      <p class="site-tagline">Explore, Imagine, Create</p>
+    </div>
+    <div class="header-buttons">
+      <button type="button" class="btn btn-blue" id="sign-in-button" data-open-modal="sign-in-modal">Sign In</button>
+      <button type="button" class="btn btn-blue" id="sign-up-button" data-open-modal="sign-up-modal">Sign Up</button>
+    </div>
+  </header>
+
+  <!-- Sign Up modal -->
+  <div class="modal" id="sign-up-modal">
+    <div class="modal-content">
+      <i class="fa fa-times close-icon" data-close-modal="sign-up-modal" aria-label="Close"></i>
+      <h2 class="modal-title">Get Started</h2>
+      <form class="modal-form" id="sign-up-form">
+        <input type="text" id="sign-up-name" placeholder="Enter your name" required>
+        <input type="text" id="sign-up-username" placeholder="Enter your username" required>
+        <input type="password" id="sign-up-password" placeholder="Enter your password" required>
+        <input type="password" id="sign-up-confirm-password" placeholder="Re-enter your password" required>
+        <button type="submit" class="btn btn-green">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Sign In modal -->
+  <div class="modal" id="sign-in-modal">
+    <div class="modal-content">
+      <i class="fa fa-times close-icon" data-close-modal="sign-in-modal" aria-label="Close"></i>
+      <h2 class="modal-title">Welcome Back!</h2>
+      <form class="modal-form" id="sign-in-form">
+        <input type="text" id="sign-in-username" placeholder="Enter your username" required>
+        <input type="password" id="sign-in-password" placeholder="Enter your password" required>
+        <button type="submit" class="btn btn-green">Sign In</button>
+      </form>
+      <p class="switch-text">Not a member? <a href="#" id="switch-to-sign-up">Sign Up</a></p>
+    </div>
+  </div>
+
+  <!-- Banner image and main buttons -->
+  <main class="home-main">
+    <img src="images/banner.svg" alt="Warm sunrise banner" class="home-banner">
+    <div class="home-buttons">
+      <a href="html/postslist.html" class="btn btn-orange" id="all-posts-button">All Posts</a>
+      <button type="button" class="btn btn-orange" id="create-post-button" data-open-modal="create-post-modal">Create Post</button>
+    </div>
+  </main>
+
+  <!-- Create Post modal -->
+  <div class="modal" id="create-post-modal">
+    <div class="modal-content">
+      <i class="fa fa-times close-icon" data-close-modal="create-post-modal" aria-label="Close"></i>
+      <h2 class="modal-title">Pen Your Post</h2>
+      <form class="modal-form" id="create-post-form">
+        <label for="post-title">Title</label>
+        <input type="text" id="post-title" placeholder="Enter title of your post">
+        <label for="post-contents">Contents</label>
+        <textarea id="post-contents" rows="8" placeholder="Enter the contents of your post"></textarea>
+        <button type="submit" class="btn btn-green create-button">Create</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="scripts/common.js"></script>
+  <script src="scripts/index.js"></script>
+</body>
+</html>

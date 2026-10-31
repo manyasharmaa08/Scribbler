@@ -1,0 +1,114 @@
+/* post.css - styles for the single post page */
+
+body {
+  background-color: #ffeedd;
+}
+
+.post-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px 60px;
+}
+
+/* Author on the left, Edit/Save on the right, same horizontal line */
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Avatar picture next to the author name */
+.post-author-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.post-author-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Title and text are centred horizontally */
+.post-title {
+  margin: 0 0 16px 0;
+  padding: 8px;
+  text-align: center;
+  font-size: 32px;
+  border: 2px solid transparent;   /* keeps layout steady when the border shows */
+  border-radius: 4px;
+}
+
+.post-text {
+  margin: 0 0 24px 0;
+  padding: 8px;
+  text-align: center;
+  line-height: 1.6;
+  border: 2px solid transparent;
+  border-radius: 4px;
+}
+
+.post-text p {
+  margin: 0 0 14px 0;
+}
+
+/* Pink border while the post is in edit mode */
+.editable {
+  border-color: #ff69b4;
+  outline: none;
+  background-color: #ffffff;
+}
+
+/* Like */
+.like-message {
+  margin: 10px 0 24px 0;
+  color: #444444;
+}
+
+/* Comment box */
+.comment-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+#comment-input {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid #bbbbbb;
+  border-radius: 4px;
+}
+
+/* Grey comments area, white individual comments */
+.all-comments {
+  margin-top: 30px;
+  padding: 16px;
+  background-color: #cccccc;
+  border-radius: 6px;
+}
+
+.all-comments h3 {
+  margin: 0 0 12px 0;
+}
+
+.comment-item {
+  margin-bottom: 10px;
+  padding: 12px 14px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  word-break: break-word;
+}
+
+.comment-item:last-child {
+  margin-bottom: 0;
+}

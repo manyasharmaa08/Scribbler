@@ -1,0 +1,60 @@
+/* index.css - styles for the home page only */
+
+body {
+  background-color: #ffffff;
+}
+
+/* Banner image above the buttons, everything centred below the header */
+.home-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  min-height: calc(100vh - 110px);
+  padding: 20px;
+}
+
+.home-banner {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* The two orange buttons sit side by side */
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.btn-orange {
+  padding: 16px 34px;
+  font-size: 20px;
+  text-decoration: none;
+  background-color: #f5a623;
+}
+
+.btn-orange:hover {
+  background-color: #d98b0c;
+}
+
+/* Create Post modal */
+#create-post-modal .modal-content {
+  max-width: 520px;
+}
+
+#create-post-modal label {
+  font-weight: bold;
+}
+
+#create-post-modal textarea {
+  resize: vertical;
+}
+
+.create-button {
+  align-self: center !important;
+  min-width: 140px;
+}
